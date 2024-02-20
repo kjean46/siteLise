@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="icon" href="im/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Récapitulatif des réponses</title>
+</head>
+<style>
+    img {
+        border: 5px solid #B83746;
+        /* Couleur noire pour la bordure */
+        display: inline-block;
+        /* Pour ajuster la largeur de la bordure au contenu */
+        border-radius: 10px;
+        /* Coins arrondis */
+    }
+</style>
+
+<body>
+
+    <h1>Récapitulatif des réponses</h1>
+
+
+    <div id="reactions">
+        <!-- Contenu des réactions ici -->
+
+    </div>
+
+    <div id="score">
+        <!-- Le score sera affiché ici -->
+    </div>
+
+    <button class="button" onclick="window.location.href = 'menu.html';">Retour</button>
+
+    <script src="js/recapitulatif.js"></script>
+    <script>
+        // JavaScript pour déclencher le fondu du titre h1
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sélectionner le titre h1
+            const title = document.querySelector('h1');
+            // Appliquer une opacité de 1 pour effectuer le fondu
+            title.style.opacity = 1;
+        });
+    </script>
+
+</body>
+
+</html>

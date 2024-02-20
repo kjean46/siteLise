@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="icon" href="im/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesMusique.css">
+    <title>Music Player</title>
+</head>
+<div class="menu-container" onmouseleave="closeMenu()">
+    <button class="menu-btn" onmouseover="openMenu()" onclick="toggleMenu()">Menu</button>
+    <div class="menu-list" id="menuList">
+        <a href="menu.html">Accueil</a>
+        <a href="SV.html">Saint Valentin 2024</a> <!-- Remplacer # par .html -->
+        <a href="QCM.html">Test</a>
+        <a href="carte.html">Carte</a>
+    </div>
+</div>
+
+<main>
+
+    <body>
+        <div id="overlay"></div>
+        <div id="backgroundImage"></div>
+
+        <h1>DJ chaton !</h1>
+        <div id="devGestionMusique">
+            <button class="button" onclick="playMusic('mus/MJ_MITM.mp3')">Musique 1</button>
+            <button class="button" onclick="playMusic('mus/MJ_YAML.mp3')">Musique 2</button>
+            <button class="button" onclick="playMusic('mus/Naruto_op.mp3')">Musique 3</button>
+            <button class="button" onclick="playMusic('mus/ScorpionSLY.mp3')">Musique 4</button>
+            <!-- Ajoutez d'autres boutons pour plus de musiques -->
+        </div>
+
+        <audio id="audioPlayer" controls autoplay hidden>
+            <!-- Le lecteur audio -->
+        </audio>
+
+        <div id="devGestionMusique">
+            <input type="range" id="seekBar" value="0">
+            <button id="myBtn" class="button">Play/Pause</button>
+        </div>
+
+        <td><img id="gif-image" src="im/dance.gif" alt="GIF"></td>
+
+        <script src="js/MJ.js"></script>
+    </body>
+</main>
+
+</html>

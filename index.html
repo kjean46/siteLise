@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="icon" href="im/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Page de connexion</title>
+</head>
+<style>
+    /* Style CSS */
+    body {
+        background-image: url('im/BGmenu.jpg');
+    }
+    #passwordInput{    
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #7BADB7; /* Couleur de la bordure */
+    color: #7BADB7; /* Couleur du texte */
+    background-color: transparent; /* Couleur de fond transparente */
+    border-radius: 5px; /* Coins arrondis */
+    transition: all 0.3s ease; /* Transition fluide */
+    }
+</style>
+
+<body>
+
+    <h2>Entrez le mot de passe pour accéder au site :</h2>
+    <form id="loginForm">
+        <input type="password" id="passwordInput" placeholder="Mot de passe">
+        <button class="button"  type="submit">Se connecter</button>
+    </form>
+
+    <script src="js/connexion.js"></script>
+
+</body>
+
+</html>

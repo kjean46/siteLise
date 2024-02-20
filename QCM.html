@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="icon" href="im/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>QCM HTML</title>
+</head>
+
+<body>
+
+    <div class="menu-container" onmouseleave="closeMenu()">
+        <button class="menu-btn" onmouseover="openMenu()" onclick="toggleMenu()">Menu</button>
+        <div class="menu-list" id="menuList">
+            <a href="menu.html">Accueil</a>
+            <a href="SV.html">Saint Valentin 2024</a>
+            <a href="MJ.html">Musique</a>
+            <a href="carte.html">Carte</a>
+        </div>
+    </div>
+
+    <main>
+
+        <h1>Questionnaire à choix multiple</h1>
+
+        <form id="qcmForm" action="recapitulatif.html" method="post">
+
+            <h2>Question 1: Quelle est la tarte préférée de ton chéri ?</h2>
+            <input type="radio" id="q1_11" name="q1" value="11">
+            <label for="q1_11">Tarte aux citrons</label><br>
+            <input type="radio" id="q1_12" name="q1" value="12">
+            <label for="q1_12">Tarte aux quetsches</label><br>
+            <input type="radio" id="q1_13" name="q1" value="13">
+            <label for="q1_13">Tarte aux pommes</label><br>
+
+            <h2>Question 2: Quel est le meilleur moyen de décourir une ville?</h2>
+            <input type="radio" id="q2_21" name="q2" value="21">
+            <label for="q2_21">En bus</label><br>
+            <input type="radio" id="q2_22" name="q2" value="22">
+            <label for="q2_22">En marchant lentement et peu</label><br>
+            <input type="radio" id="q2_23" name="q2" value="23">
+            <label for="q2_23">En marchant viiite et beeeaucoup</label><br>
+
+            <h2>Question 3: Qui a la meilleure cuisine étrangère?</h2>
+            <input type="radio" id="q3_31" name="q3" value="31">
+            <label for="q3_31">Le lourd Vietnam</label><br>
+            <input type="radio" id="q3_32" name="q3" value="32">
+            <label for="q3_32">Les obèses américains</label><br>
+            <input type="radio" id="q3_33" name="q3" value="33">
+            <label for="q3_33">Les frauduleux japonais</label><br>
+
+            <h2>Question 4: Quelle serait la cuisson optimale de dudu lapin ?</h2>
+            <input type="radio" id="q4_41" name="q4" value="41">
+            <label for="q4_41">Bleu</label><br>
+            <input type="radio" id="q4_42" name="q4" value="42">
+            <label for="q4_42">A point</label><br>
+            <input type="radio" id="q4_43" name="q4" value="43">
+            <label for="q4_43">Saignant </label><br>
+
+            <h2>Question 5: Je prends soin de pépépère ?</h2>
+            <input type="radio" id="q5_51" name="q5" value="51">
+            <label for="q5_51">OUI</label><br>
+            <input type="radio" id="q5_52" name="q5" value="52">
+            <label for="q5_52">NON</label><br>
+
+            <h2>Question 6: Quel est mon jeu préféré ?</h2>
+            <input type="radio" id="q6_61" name="q6" value="61">
+            <label for="q6_61">Star Wars BattleFront II</label><br>
+            <input type="radio" id="q6_62" name="q6" value="62">
+            <label for="q6_62">Zelda : Breath of the Wild</label><br>
+            <input type="radio" id="q6_63" name="q6" value="63">
+            <label for="q6_63">Zelda : Twilight Princess </label><br>
+
+            <h2>Question 7: Quel est mon sport favori ?</h2>
+            <input type="radio" id="q7_71" name="q7" value="71">
+            <label for="q7_71">L'escalade</label><br>
+            <input type="radio" id="q7_72" name="q7" value="72">
+            <label for="q7_72">Le vélo</label><br>
+            <input type="radio" id="q7_73" name="q7" value="73">
+            <label for="q7_73">La natation </label><br>
+
+            <h2>Question 8: Lise sans lunette est une doublure,<br>elle n'est pas la même personne.</h2>
+            <input type="radio" id="q8_81" name="q8" value="81">
+            <label for="q8_81">OUI</label><br>
+            <input type="radio" id="q8_82" name="q8" value="82">
+            <label for="q8_82">NON</label><br>
+
+            <h2>Question 9: Quel est mon dessert préféré parmis ces 3:</h2>
+            <input type="radio" id="q9_91" name="q9" value="91">
+            <label for="q9_91">Le macaron</label><br>
+            <input type="radio" id="q9_92" name="q9" value="92">
+            <label for="q9_92">L'éclair</label><br>
+            <input type="radio" id="q9_93" name="q9" value="93">
+            <label for="q9_93">Le Chinois </label><br>
+
+            <h2>Question 10: Quel est mon fromage préféré parmis ces 3:</h2>
+            <input type="radio" id="q10_101" name="q10" value="101">
+            <label for="q10_101">Le Morbier</label><br>
+            <input type="radio" id="q10_102" name="q10" value="102">
+            <label for="q10_102">Chaussée aux moines</label><br>
+            <input type="radio" id="q10_103" name="q10" value="103">
+            <label for="q10_103">Le Munster</label><br>
+
+            <h2>Question 11: Quel est mon groupe sanguin ?</h2>
+            <input type="radio" id="q11_111" name="q11" value="111">
+            <label for="q11_111">A+</label><br>
+            <input type="radio" id="q11_112" name="q11" value="112">
+            <label for="q11_112">A-</label><br>
+            <input type="radio" id="q11_113" name="q11" value="113">
+            <label for="q11_113">AB</label><br>
+
+            <h2>Question 12: Comment envisagé-je ma vie dans 10 ans ?</h2>
+            <input type="radio" id="q12_121" name="q12" value="121">
+            <label for="q12_121">Avec toi</label><br>
+            <input type="radio" id="q12_122" name="q12" value="122">
+            <label for="q12_122">PDG de Microsoft</label><br>
+            <input type="radio" id="q12_123" name="q12" value="123">
+            <label for="q12_123">Président</label><br>
+
+            <h2>Question 13: Si je pouvais dîner avec une personnalité<br>qui choisirais-je ? ?</h2>
+            <input type="radio" id="q13_131" name="q13" value="131">
+            <label for="q13_131">Mao Zedong</label><br>
+            <input type="radio" id="q13_132" name="q13" value="132">
+            <label for="q13_132">Charles de Gaulle</label><br>
+            <input type="radio" id="q13_133" name="q13" value="133">
+            <label for="q13_133">Napoléon</label><br>
+
+            <h2>Question 14: Comment exprimé-je le plus mon amour ?</h2>
+            <input type="radio" id="q14_141" name="q14" value="141">
+            <label for="q14_141">En embêtant doudou Lapin</label><br>
+            <input type="radio" id="q14_142" name="q14" value="142">
+            <label for="q14_142">En te collant</label><br>
+            <input type="radio" id="q14_143" name="q14" value="143">
+            <label for="q14_143">En t'obligeant à marcher plus vite</label><br>
+
+            <h2>Question 15: Où est-ce que je rêve de voyager ?</h2>
+            <input type="radio" id="q15_151" name="q15" value="151">
+            <label for="q15_151">En Inde</label><br>
+            <input type="radio" id="q15_152" name="q15" value="152">
+            <label for="q15_152">Aux Etats-Unis</label><br>
+            <input type="radio" id="q15_153" name="q15" value="153">
+            <label for="q15_153">Au Vietnam</label><br>
+
+            <h2>Question Bonus: Combien de temps m'a pris ce site ?</h2>
+            <input type="radio" id="q16_161" name="q16" value="161">
+            <label for="q16_161">Moins d'une semaine avec l'aide de M.GPT</label><br>
+            <input type="radio" id="q16_162" name="q16" value="162">
+            <label for="q16_162">1 semaine sans M.GPT</label><br>
+            <input type="radio" id="q16_163" name="q16" value="163">
+            <label for="q16_163">2 mois?!!!</label><br>
+
+            <br>
+            <input class="button" type="submit" value="Soumettre">
+        </form>
+    </main>
+
+    <script src="js/QCM.js"></script>
+</body>
+
+</html>

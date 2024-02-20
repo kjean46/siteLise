@@ -1,0 +1,205 @@
+/* Style de base */
+body {
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 25px; /* Augmente la taille de la police à 20 pixels */
+
+    padding: 40px;
+    align-self: center;
+    margin: 0; /* Supprime les marges par défaut du body */
+    text-align: center; /* Centre horizontalement le contenu */
+
+    background-image: url('im/Home.jpg');
+    background-color: #FFF9F1;
+    background-size: 100% auto;
+    background-position: top; /* Positionne l'image de fond tout en haut de la page */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */    
+
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Pour les écrans plus petits, utilisez cover pour remplir l'écran */
+    }
+}
+
+
+h1 {
+    color: #000000;
+    border: 5px solid #000; /* Couleur noire pour la bordure */
+    padding: 10px; /* Espacement entre le texte et la bordure */
+    margin: 20px; /* Espacement entre la bordure et les autres éléments */
+    display: inline-block; /* Pour ajuster la largeur de la bordure au contenu */
+    background-color: transparent; /* Couleur de fond transparente */
+    border-radius: 10px; /* Coins arrondis */
+
+    opacity: 0; /* Définit l'opacité initiale à 0 */
+    transition: opacity 2s ease; /* Ajoute une transition de fondu de 1 seconde */
+}
+
+h2 {
+    color: #B83746;
+}
+
+
+p {
+    color: #000000;
+}
+
+            /* Style par ID */
+#reactions {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    position: relative;
+    left: 100%; /* Position initiale à droite */
+    transition: left 1s ease; /* Transition pour animer le déplacement */
+}
+
+#reactions.show {
+    left: 0; /* Déplacement vers la gauche pour apparaître à l'écran */
+}
+
+
+#score img {
+    display: left; /* Affiche les images comme des blocs pour les positionner verticalement */
+    margin: 10px auto; /* Ajoute une marge autour des images et les centre horizontalement */
+    max-width: 15%; /* Assure que les images ne dépassent pas la largeur du conteneur parent */
+}
+
+#reactions img {
+    display: block; 
+    margin: 10px auto; 
+    max-width: 5%; 
+}
+
+
+            /* Styles de base pour le bouton */
+.button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #7BADB7; /* Couleur de la bordure */
+    color: #7BADB7; /* Couleur du texte */
+    background-color: transparent; /* Couleur de fond transparente */
+    border-radius: 5px; /* Coins arrondis */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+/* Effet de survol */
+.button:hover {
+    background-color: #7BADB7; /* Couleur de fond au survol */
+    color: #FFF9F1; /* Couleur du texte au survol */
+}
+/* Effet de clic */
+.button:active {
+    transform: translateY(1px); /* Décalage vers le bas lors du clic */
+    box-shadow: none; /* Pas d'ombre au clic */
+}
+
+            /* menu liste */
+.menu-container {
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    right: 10px;
+    
+}
+
+.menu-btn {
+
+    width: 160px; /* Fixer la largeur du bouton */
+    color: #7BADB7;
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid #7BADB7; /* Couleur noire pour la bordure */
+    margin: 18px; /* Espacement entre la bordure et les autres éléments */
+    display: inline-block; /* Pour ajuster la largeur de la bordure au contenu */
+    background-color: transparent; /* Couleur de fond transparente */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.menu-list {
+    display: none;
+    position: above;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.menu-list a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #7BADB7;
+}
+
+.menu-list a:hover {
+    background-color: #f0f0f0;
+}
+
+            /* Style pour  le le FORM */
+
+#qcmForm {
+    position: relative;
+    left: 100%; /* Position initiale à droite */
+    transition: left 1s ease; /* Transition pour animer le déplacement */
+}
+
+#qcmForm.show {
+    left: 0; /* Déplacement vers la gauche pour apparaître à l'écran */
+}
+            
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Style pour les étiquettes (labels) */
+label {
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #FFF9F1;
+    border-radius: 5px;
+    background-color: #FFF9F1;
+}
+
+/* Style pour les étiquettes au survol */
+label:hover {
+    background-color: #7BADB7;
+    color: #FFF9F1; /* Couleur du texte au survol */
+}
+/* Style pour les étiquettes lorsque le bouton radio est sélectionné */
+input[type="radio"]:checked + label {
+    background-color: #7BADB7;
+    color: #FFF9F1;
+    border-color: #7BADB7;
+}
+
+            /* Style pour les liens dans le menu index */
+.page-links {
+    margin-top: 30px;
+}
+.page-link {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #7BADB7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.page-link:hover {
+    background-color: #7BADB7;
+    color: #FFF9F1;
+}

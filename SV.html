@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <link rel="icon" href="im/icone.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Boutons et Image</title>
+  <style>
+    #imageContainer {
+      text-align: center;
+    }
+
+    #displayedImage {
+      border: 5px solid #7BADB7;
+      /* Ajouter une bordure de 2px avec une couleur */
+    }
+
+    #firstButton,
+    #secondButton {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    #firstButton {
+      background-color: green;
+    }
+
+    #secondButton {
+      background-color: red;
+    }
+
+    #buttonContainer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    #textBetween {
+      margin: 34px 0;
+      font-size: 30px;
+      text-align: center;
+      color: rgb(148, 50, 50);
+    }
+
+    .largeImage {
+      width: 1200px;
+      /* Taille agrandie de l'image */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container" onmouseleave="closeMenu()">
+    <button class="menu-btn" onmouseover="openMenu()" onclick="toggleMenu()">Menu</button>
+    <div class="menu-list" id="menuList">
+      <a href="menu.html">Accueil</a>
+      <a href="QCM.html">Test</a>
+      <a href="MJ.html">Musique</a>
+      <a href="carte.html">Carte</a>
+    </div>
+  </div>
+
+  <main>
+    <div id="imageContainer">
+      <img src="im/im2.gif" alt="Image initiale" id="displayedImage" width="300">
+    </div>
+
+    <p id="textBetween">Veux-tu être mon bubu du Bubu-day ?</p>
+
+    <div id="buttonContainer">
+      <button id="firstButton" onclick="changeImage()">Oui</button>
+      <button id="secondButton" onclick="changeText()">Non</button>
+    </div>
+
+
+    <script>
+      // JavaScript pour activer le menu lors du survol
+      var menuList = document.getElementById("menuList");
+
+      function openMenu() {
+        document.getElementById("menuList").style.display = "block";
+      }
+
+      function closeMenu() {
+        document.getElementById("menuList").style.display = "none";
+      }
+
+      function toggleMenu() {
+        var menuList = document.getElementById("menuList");
+        if (menuList.style.display === "block") {
+          menuList.style.display = "none";
+        } else {
+          menuList.style.display = "block";
+        }
+      }
+      const alternateTexts = [
+        'Quoi ?!?!?!',
+        'Vraiment ??',
+        'Tu aurais pleins de calins !',
+        'Espèce de marmotte !!',
+        'Pourtant c\'est moi qui ait eu l\'idée de ce code !!!',
+        '._.'
+      ];
+
+      let fontSize = 16;
+
+      function changeImage() {
+        const imageContainer = document.getElementById('imageContainer');
+        const textBetween = document.getElementById('textBetween');
+        const firstButton = document.getElementById('firstButton');
+        const secondButton = document.getElementById('secondButton');
+
+        // Changement de l'image
+        const newImage = document.createElement('img');
+        newImage.src = 'im/im1.gif'; // Chemin de la nouvelle image
+        newImage.alt = 'Nouvelle image';
+        newImage.width = 600;
+        newImage.classList.add('largeImage'); // Ajoute la classe pour agrandir l'image
+        imageContainer.innerHTML = ''; // Effacer le contenu précédent
+        imageContainer.appendChild(newImage);
+
+        // Changement du texte
+        textBetween.textContent = 'Tadaa !!!!!';
+
+        // Cacher les boutons
+        firstButton.style.display = 'none';
+        secondButton.style.display = 'none';
+
+      }
+
+      function changeText() {
+        const firstButton = document.getElementById('firstButton');
+        const secondButton = document.getElementById('secondButton');
+        const textBetween = document.getElementById('textBetween');
+        // Sélection aléatoire d'un texte alternatif
+        const randomIndex = Math.floor(Math.random() * alternateTexts.length);
+        textBetween.textContent = alternateTexts[randomIndex];
+
+        fontSize += 4; // Augmente la taille de la police de 4px à chaque clic
+        firstButton.style.fontSize = fontSize + 'px';
+      }
+
+
+    </script>
+  </main>
+</body>
+
+</html>

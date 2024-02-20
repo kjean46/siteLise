@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>Carte 4ans</title>
+    <link rel="icon" href="im/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styleCarte.css">
+</head>
+<div class="menu-container" onmouseleave="closeMenu()">
+    <button class="menu-btn" onmouseover="openMenu()" onclick="toggleMenu()">Menu</button>
+    <div class="menu-list" id="menuList">
+        <a href="menu.html">Accueil</a>
+        <a href="SV.html">Saint Valentin 2024</a>
+        <a href="QCM.html">Test</a>
+        <a href="MJ.html">Musique</a>
+    </div>
+</div>
+<main>
+
+    <body>
+
+        <div class="tile" onmouseover="flipTile()" onmouseout="unflipTile()">
+            <div class="front">
+                <div class="image-container">
+                    <img src="im/carteAvant.gif" alt="Image devant">
+                </div>
+            </div>
+            <div class="back">
+                <div class="image-container">
+                    <img src="im/carteArriere.gif" alt="Image derrière">
+                </div>
+            </div>
+        </div>
+        <h2> test </h2>
+        <script src="js/carte.js"></script>
+    </body>
+
+</main>
+
+</html>

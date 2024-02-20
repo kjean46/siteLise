@@ -1,0 +1,55 @@
+body {
+    background-image: url('im/BGmenu.jpg');
+    margin: 0; /* Réinitialise les marges par défaut du corps */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Assure que l'image est centrée horizontalement */
+    height: 100%; /* Assure que l'image est centrée verticalement */
+}
+
+.tile {
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+    position: relative; /* Ajoutez une position relative pour que les faces absolues soient positionnées correctement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Ajoutez cette propriété pour centrer la tuile horizontalement */
+    margin-top: calc(50vh - 50px); /* Centrez verticalement la tuile en fonction de la hauteur de la fenêtre */
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.8s; /* Ajoutez une transition pour une animation fluide */
+}
+
+.front img {
+    max-width: 100%; /* Limite la largeur de l'image à 100% de la largeur de son conteneur */
+    height: auto; /* Permet à l'image de conserver son ratio hauteur/largeur */
+}
+
+.back img {
+    max-width: 100%; /* Limite la largeur de l'image à 100% de la largeur de son conteneur */
+    height: auto; /* Permet à l'image de conserver son ratio hauteur/largeur */
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.tile:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.tile:hover .back {
+    transform: rotateY(0deg);
+}
