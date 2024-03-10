@@ -15,9 +15,9 @@ const questionList = [
     "Quel est mon dessert préféré parmis ces 3:",
     "Quel est mon fromage préféré parmis ces 3:",
     "Quel est mon groupe sanguin ?",
-    "Comment envisagé-je ma vie dans 10 ans ?",
+    "Comment j’envisage ma vie dans 10ans ? ",
     "Si je pouvais dîner avec une personnalité qui choisirais-je ?",
-    "Comment exprimé-je le plus mon amour ?",
+    "Comment est-ce que j'exprime le plus mon amour ?",
     "Où est-ce que je rêve de voyager ?",
     "Combien de temps m'a pris ce site ?"
 ];
