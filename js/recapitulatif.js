@@ -100,7 +100,7 @@ const reactionTexts = {
         93: "❌Le chinois<br>Oui mais non 😂"
     },
     q10: {
-        101: "✅Le Morbier<br>Après le Compté évidemment !",
+        101: "✅Le Morbier<br>Après le Comté évidemment !",
         102: "❌Chaussé aux moines<br>J'aime mais c'est pas un vrai fromage",
         103: "❌Le Munster<br>J'adore aussi."
     },
